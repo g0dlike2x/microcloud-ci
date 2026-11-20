@@ -1,9 +1,9 @@
 services:
   web:
-    image: nginx:latest
+    image: httpd:latest
     container_name: microcloud-web
     ports:
       - "8085:80"
     volumes:
-      - ./html:/usr/share/nginx/html:ro
+      - ./html:/usr/local/apache2/htdocs:ro
     restart: unless-stopped
